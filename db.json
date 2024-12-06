@@ -1,0 +1,167 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Amin Saeedi",
+      "username": "01010101",
+      "email": "Amin@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": 2,
+      "name": "Qadir Yolme",
+      "username": "Q_Yolme",
+      "email": "qadir@gmail.com",
+      "crime": 339.75,
+      "role": "ADMIN"
+    },
+    {
+      "id": 3,
+      "name": "Ehsan Mmdi",
+      "username": "ehs",
+      "email": "ehsan@gmail.com",
+      "crime": 90000,
+      "role": "USER"
+    },
+    {
+      "id": "a9647cef-7389-49ef-87e8-01f5e4748373",
+      "name": "Mohammad Khataei",
+      "username": "Mohammad1234",
+      "email": "mohammad@gmail.com",
+      "crime": 0,
+      "role": "ADMIN"
+    },
+    {
+      "id": "4770e2fa-a8e7-4c70-9c7b-af5b7812b81c",
+      "name": "ALi Hashemi",
+      "username": "ali57",
+      "email": "ali@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": "8fd593d6-f452-44fd-80ba-41a9321b692d",
+      "name": "Hosna Alizade",
+      "username": "Hosna88",
+      "email": "Hosna88@gmail.com",
+      "crime": 0,
+      "role": "ADMIN"
+    },
+    {
+      "id": "fd8a149b-8ef3-414d-a768-baf487640fec",
+      "name": "Ehsan Jalali",
+      "username": "Ehasan81",
+      "email": "ehasan81@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": "205b80a0-1d04-4d42-b8df-1b7ab0fe7864",
+      "name": "Ali Alizadeh",
+      "email": "Ali@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": "3c82fecc-e997-41cd-85a0-a14b7abda675",
+      "name": "Hosein Mohammadi",
+      "email": "Hoseinmh@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": "3b3dd47e-690b-4c3a-bd1c-791f1fe9970a",
+      "name": "Ali Mohammadii",
+      "email": "alimh63@gmail.com",
+      "crime": 0,
+      "role": "USER"
+    },
+    {
+      "id": "e0a08c1f-2c3c-4aba-913c-8b6fbc48869d",
+      "name": "Julius Witting",
+      "email": "Celestino.Pfannerstill99@hotmail.com",
+      "crime": 0,
+      "role": "USER"
+    }
+  ],
+  "books": [
+    {
+      "id": 4,
+      "title": "C# book",
+      "author": "person 1",
+      "price": "200000",
+      "free": 0
+    },
+    {
+      "id": 5,
+      "title": "Javascript Book",
+      "author": "Person 1",
+      "price": 200000,
+      "free": 0
+    },
+    {
+      "id": "83aa4897-b963-483d-ae34-e6beb455f7ba",
+      "title": "PHP Book",
+      "author": "Person 1",
+      "price": 200000,
+      "free": 1
+    },
+    {
+      "id": "e5f143d3-49db-4947-913f-d76a647c2caf",
+      "title": "Atoms",
+      "author": "Danial Wards",
+      "price": 320000,
+      "free": 1
+    },
+    {
+      "id": "17ea02a5-8a71-455b-9b0e-c230ea252f49",
+      "title": "pysycs",
+      "author": "Rahim Shojaian",
+      "price": 400000,
+      "free": 1
+    },
+    {
+      "id": "0f8f6673-cfee-42a8-ae3e-0748bdd2fdf5",
+      "title": "Atoms",
+      "author": "Danial Wards",
+      "price": 320000,
+      "free": 1
+    },
+    {
+      "id": "d6b74a9b-f48d-4139-be20-ac52dd9dea90",
+      "title": "Atoms",
+      "author": "Danial Ward",
+      "price": 320000,
+      "free": 1
+    },
+    {
+      "id": "4f0711b0-4f3d-4a97-b69e-3fd7554d51d9",
+      "title": "Wilma Cummings",
+      "author": "Latoya Langworth",
+      "price": 385.76,
+      "free": 1
+    },
+    {
+      "id": "cb5db2ba-e0da-4381-8053-f787c9506e8b",
+      "title": "Steve Wehner",
+      "author": "Margie Littel",
+      "price": 195.94,
+      "free": 1
+    },
+    {
+      "id": "2a289de3-e6cd-4ea8-ae45-fac062f2d595",
+      "title": "Emily McKenzie",
+      "author": "Dr. Wilfred Price",
+      "price": 195.12,
+      "free": 1
+    }
+  ],
+  "rents": [
+    { "id": "a03b2d67-3c8d-470a-9e03-ae1fb7fbcb91", "userID": 2, "bookID": 2 },
+    { "id": "b468212f-c754-402a-9314-f4e0b0204e43", "userID": 2, "bookID": 1 },
+    { "id": "715b51b0-cb35-4eb9-9b52-7a12ca4eeca1", "userID": 3, "bookID": 3 },
+    { "id": "bae24521-13b2-4db4-a17a-7eed8c246c46", "bookID": 4 },
+    { "id": "01d3f24c-1706-4942-aff1-e99cb479cf49", "userID": 3, "bookID": 5 }
+  ]
+}
