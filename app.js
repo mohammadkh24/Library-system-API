@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser")
-const usersRouter = require("./routes/user")
+const authRouter = require("./routes/auth");
+const usersRouter = require("./routes/users")
 
 const app = express();
 
@@ -11,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Routes
-app.use("/api/auth" , usersRouter);
+app.use("/api/auth" , authRouter);
+app.use("/api/users" , usersRouter)
 
 // Not Found Page
 app.use((req,res) => {
