@@ -1,10 +1,18 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path")
 const bodyParser = require("body-parser")
 const authRouter = require("./routes/auth");
-const usersRouter = require("./routes/users")
+const usersRouter = require("./routes/users");
+const booksRouter = require("./routes/books");
 
 const app = express();
+
+// Set Public
+app.use(
+    "/books/covers",
+    express.static(path.join(__dirname, "public" , "books" , "covers"))
+  );
 
 // Get req.body
 app.use(cors());
@@ -13,7 +21,8 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/api/auth" , authRouter);
-app.use("/api/users" , usersRouter)
+app.use("/api/users" , usersRouter);
+app.use("/api/books" , booksRouter)
 
 // Not Found Page
 app.use((req,res) => {
