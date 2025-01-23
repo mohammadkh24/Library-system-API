@@ -23,6 +23,10 @@ const schema = mongoose.Schema(
       type: String,
       required: true,
     },
+    categoryID : {
+      type : mongoose.Types.ObjectId,
+      ref : "Category"
+    }
   },
   { timestamps: true }
 );

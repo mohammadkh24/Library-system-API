@@ -1,6 +1,7 @@
 const { isValidObjectId } = require("mongoose");
 const booksModel = require("../models/books");
 const bookUsersModel = require("../models/bookUsers");
+const categoriesModel = require("../models/categories");
 
 exports.getAll = async (req, res) => {
   const books = await booksModel.find({}).lean();
@@ -29,13 +30,22 @@ exports.getOne = async (req, res) => {
 };
 
 exports.create = async (req, res) => {
-  const { title, description, author, inventory } = req.body;
+  const { title, description, author, inventory, categoryID } = req.body;
+
+  const category = await categoriesModel.findOne({_id : categoryID});
+
+  if (!category) {
+    return res.status(404).json({
+        message : "Category not found !!"
+    })
+  }
 
   const createdBook = await booksModel.create({
     title,
     description,
     author,
     inventory,
+    categoryID,
     cover: "image.jpg",
   });
 

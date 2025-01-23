@@ -5,6 +5,7 @@ const bodyParser = require("body-parser")
 const authRouter = require("./routes/auth");
 const usersRouter = require("./routes/users");
 const booksRouter = require("./routes/books");
+const categoriesRouter = require("./routes/categories");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use("/api/auth" , authRouter);
 app.use("/api/users" , usersRouter);
 app.use("/api/books" , booksRouter)
+app.use("/api/categories" , categoriesRouter)
 
 // Not Found Page
 app.use((req,res) => {
