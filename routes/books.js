@@ -10,7 +10,7 @@ const router = express.Router();
 router
   .route("/")
   .get(booksController.getAll)
-  .post(authMiddleware, isAdminMiddleware,multer({ storage: multerStorage }).single("covers") , booksController.create);
+  .post(authMiddleware, isAdminMiddleware,multer({ storage: multerStorage }).single("cover") , booksController.create);
 
 router
   .route("/:id")

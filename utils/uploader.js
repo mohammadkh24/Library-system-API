@@ -1,31 +1,20 @@
-const multer = require("multer");
 const path = require("path");
+const multer = require("multer");
+const crypto = require("crypto");
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname , ".." ,"public" , "books" , "covers"));
+module.exports = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "..", "public"));
   },
-  filename: function (req, file, cb) {
-    const fileName = Date.now() + Math.random();
+  filename: (req, file, cb) => {
+    const fileName = Date.now() + String(Math.random() * 9999);
+
+    // const hashedFilename = crypto
+    //   .createHash("SHA256")
+    //   .update(file.originalname)
+    //   .digest("hex");
+
     const ext = path.extname(file.originalname);
-
-    const validMimeTypes = ["image/jpg", "image/jpeg" , "image/png"]
-
-    if (validMimeTypes.includes(file.mimetype)) {
-        cb(null, `${fileName}${ext}`);
-    } else {
-        cb(new Error("Only .jpg | .jpeg | .png"));
-    }
+    cb(null, fileName + ext);
   },
 });
-
-const maxSize = 3 * 1000 * 1000;
-
-const uploader = multer({
-  storage: storage,
-  limits: {
-    fileSize: maxSize,
-  },
-});
-
-module.exports = uploader;

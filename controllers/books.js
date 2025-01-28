@@ -30,7 +30,7 @@ exports.getOne = async (req, res) => {
 };
 
 exports.create = async (req, res) => {
-  const { title, description, author, inventory, categoryID } = req.body;
+  const { title, description, author, inventory, categoryID  } = req.body;
 
   const category = await categoriesModel.findOne({_id : categoryID});
 
@@ -46,7 +46,7 @@ exports.create = async (req, res) => {
     author,
     inventory,
     categoryID,
-    cover: "image.jpg",
+    cover: req.file.filename,
   });
 
   if (!createdBook) {
