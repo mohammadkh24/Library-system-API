@@ -77,21 +77,13 @@ exports.login = async (req, res) => {
 };
 
 exports.getMe = async (req, res) => {
-  const { id } = req.params;
+  const user = await usersModel.findById(req.user._id).select("-password")
 
-  if (!isValidObjectId(id)) {
-    return res.status(400).json({
-      message: "UserID is not valid !!",
-    });
-  }
+    if (!user) {
+        return res.status(404).json({
+            message : "User Not Found !!"
+        })
+    };
 
-  const user = await usersModel.findOne({ _id: id });
-
-  if (!user) {
-    return res.status(404).json({
-      message: "User not found !!",
-    });
-  }
-
-  return res.json({ user });
+    return res.json(user)
 };
