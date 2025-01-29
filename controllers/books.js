@@ -46,7 +46,7 @@ exports.create = async (req, res) => {
     author,
     inventory,
     categoryID,
-    cover: req.file.filename,
+    cover: "image.jpg"
   });
 
   if (!createdBook) {
